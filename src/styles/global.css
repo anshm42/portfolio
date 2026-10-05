@@ -100,16 +100,16 @@
   }
 
   .hero {
-    padding-block: clamp(4rem, 8vw, 6rem);
+    padding-block: clamp(3rem, 6vw, 4.5rem);
     border-bottom: 1px solid var(--line);
   }
   .hero h1 {
-    max-width: 32ch;
-    margin-block: 1.2rem;
-    font-size: clamp(1.55rem, 3vw, 2.2rem);
-    font-weight: 400;
-    letter-spacing: -.025em;
-    line-height: 1.25;
+    max-width: 42rem;
+    margin-block: 1rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.55;
   }
   .hero__intro { max-width: 34rem; color: var(--muted); }
   .hero__footer { display: flex; justify-content: space-between; align-items: center; gap: 2rem; margin-top: 3rem; }
@@ -120,7 +120,7 @@
   .availability span { width: .35rem; height: .35rem; border-radius: 50%; background: var(--accent); }
 
   .page-intro { padding-block: clamp(3.5rem, 7vw, 5rem); border-bottom: 1px solid var(--line); }
-  .page-intro h1 { max-width: 34ch; margin-block: 1rem; font-size: clamp(1.45rem, 2.5vw, 1.8rem); font-weight: 400; letter-spacing: -.02em; line-height: 1.35; }
+  .page-intro h1 { max-width: 42rem; margin-block: 1rem; font-size: 1.05rem; font-weight: 500; letter-spacing: 0; line-height: 1.55; }
   .page-intro > p:last-child { max-width: 36rem; color: var(--muted); }
 
   .section { padding-block: clamp(3.5rem, 7vw, 5rem); border-bottom: 1px solid var(--line); }
@@ -171,8 +171,7 @@
     .site-header { grid-template-columns: 1fr auto; padding-block: .9rem; }
     .identity span { display: none; }
     nav { grid-column: 1 / -1; grid-row: 2; justify-content: space-between; gap: .75rem; overflow-x: auto; padding-top: .6rem; border-top: 1px solid var(--line); }
-    .hero { padding-block: 3.5rem; }
-    .hero h1 { font-size: clamp(1.5rem, 7vw, 2rem); }
+    .hero { padding-block: 3rem; }
     .hero__footer { align-items: flex-start; flex-direction: column; }
     .page-links a { grid-template-columns: 2rem 1fr auto; }
     .page-links p { display: none; }
