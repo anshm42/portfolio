@@ -97,7 +97,7 @@
   .resume-points { margin-block: 2.75rem; padding-left: 1.25rem; }
   .resume-points > li { margin-block: .8rem; }
   .resume-points ul { margin-block: .35rem; }
-  .resume-points img { width: 1.3rem; height: 1.5rem; margin-left: .25rem; object-fit: contain; vertical-align: -.4rem; }
+  .resume-points img { width: .87rem; height: 1rem; margin-left: .25rem; object-fit: contain; vertical-align: -.2rem; }
   .md-definition div { display: grid; grid-template-columns: 8rem 1fr; padding-block: .45rem; }
   .md-definition dt { color: var(--muted); font-family: var(--mono); font-size: .66rem; }
 
