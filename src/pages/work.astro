@@ -3,19 +3,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Work — Ansh Maru" description="Projects and technical work by Ansh Maru.">
-  <header class="page-intro shell">
-    <p class="kicker">01 / Work</p>
-    <h1>Projects and technical notes.</h1>
-    <p>Four project write-ups will live here once they are ready.</p>
-  </header>
+  <article class="markdown page">
+    <p class="breadcrumb"><a href="/">ansh-maru.md</a> / work</p>
+    <h1><span aria-hidden="true">#</span> work</h1>
+    <p>Projects, decisions, and technical notes will live here.</p>
 
-  <section class="section shell">
-    <div class="construction-row">
-      <div>
-        <h2>Project details are being prepared.</h2>
-        <p>No placeholder claims—real problems, decisions, and results will be added later.</p>
-      </div>
-      <span>Under construction</span>
-    </div>
-  </section>
+    <hr />
+
+    <h2><span aria-hidden="true">##</span> projects</h2>
+    <blockquote>
+      <strong>Status:</strong> under construction. I’ll add the real problems, tradeoffs,
+      and outcomes rather than filling this page with placeholder claims.
+    </blockquote>
+
+    <ul class="task-list" aria-label="Planned project write-ups">
+      <li><span aria-hidden="true">[ ]</span> Project write-up 01</li>
+      <li><span aria-hidden="true">[ ]</span> Project write-up 02</li>
+      <li><span aria-hidden="true">[ ]</span> Project write-up 03</li>
+      <li><span aria-hidden="true">[ ]</span> Project write-up 04</li>
+    </ul>
+  </article>
 </BaseLayout>

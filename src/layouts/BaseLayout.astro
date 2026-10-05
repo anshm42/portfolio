@@ -13,9 +13,9 @@ const {
 
 const path = Astro.url.pathname;
 const links = [
-  ['Work', '/work'],
-  ['About', '/about'],
-  ['Listening', '/listening'],
+  ['work', '/work'],
+  ['about', '/about'],
+  ['listening', '/listening'],
 ];
 ---
 
@@ -25,7 +25,7 @@ const links = [
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#f5f4ef" />
+    <meta name="theme-color" content="#f7f6f2" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,34 +43,33 @@ const links = [
   <body id="top">
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header shell">
-      <a class="identity" href="/" aria-label="Ansh Maru, home">
-        <strong>AM</strong>
-        <span>Computational Mathematics</span>
+    <header class="filebar shell">
+      <a class="filename" href="/" aria-label="Ansh Maru, home">
+        <span aria-hidden="true">●</span> ansh-maru.md
       </a>
 
       <nav aria-label="Primary navigation">
         {links.map(([label, href]) => (
           <a href={href} aria-current={path.startsWith(href) ? 'page' : undefined}>{label}</a>
         ))}
-        <span class="nav-muted">Résumé soon</span>
+        <span class="nav-muted">resume.todo</span>
       </nav>
 
       <button class="theme-toggle" type="button" aria-label="Switch to dark theme">
-        <span class="theme-toggle__sun" aria-hidden="true">○</span>
-        <span class="theme-toggle__moon" aria-hidden="true">●</span>
+        <span aria-hidden="true">◐</span>
       </button>
     </header>
 
-    <main id="main">
+    <main id="main" class="document shell">
       <slot />
     </main>
 
     <footer class="site-footer shell">
+      <p class="rule" aria-hidden="true">---</p>
       <div>
-        <a href="mailto:amaru@uwaterloo.ca">amaru@uwaterloo.ca</a>
-        <a href="https://github.com/anshm42">GitHub ↗</a>
-        <a href="https://www.linkedin.com/in/anshmaru">LinkedIn ↗</a>
+        <a href="mailto:amaru@uwaterloo.ca">email</a>
+        <a href="https://github.com/anshm42">github</a>
+        <a href="https://www.linkedin.com/in/anshmaru">linkedin</a>
       </div>
       <p>© 2026 Ansh Maru</p>
     </footer>
@@ -83,7 +82,7 @@ const links = [
         document.documentElement.dataset.theme = theme;
         localStorage.setItem('theme', theme);
         button?.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`);
-        themeColor?.setAttribute('content', theme === 'dark' ? '#171816' : '#f5f4ef');
+        themeColor?.setAttribute('content', theme === 'dark' ? '#191a18' : '#f7f6f2');
       };
 
       button?.addEventListener('click', () => {

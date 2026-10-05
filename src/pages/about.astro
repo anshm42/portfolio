@@ -3,48 +3,34 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="About — Ansh Maru" description="About Ansh Maru, a Computational Mathematics student at the University of Waterloo.">
-  <header class="page-intro shell">
-    <p class="kicker">02 / About</p>
-    <h1>I’m drawn to precise ideas and the systems that make them useful.</h1>
+  <article class="markdown page">
+    <p class="breadcrumb"><a href="/">ansh-maru.md</a> / about</p>
+    <h1><span aria-hidden="true">#</span> about</h1>
     <p>
       I’m Ansh, a Computational Mathematics student at the University of Waterloo
       with an interest in software engineering.
     </p>
-  </header>
+    <p>A longer introduction is still <code>under construction</code>.</p>
 
-  <section class="section split-section shell">
-    <div>
-      <header class="section-heading"><p>Education</p></header>
-      <article class="timeline-item">
-        <time>Expected 2029</time>
-        <div>
-          <h2>Bachelor of Mathematics</h2>
-          <p>Computational Mathematics, Honours</p>
-          <p>University of Waterloo</p>
-        </div>
-      </article>
-    </div>
+    <hr />
 
-    <div>
-      <header class="section-heading"><p>Direction</p></header>
-      <article class="timeline-item">
-        <time>Seeking</time>
-        <div>
-          <h2>Software engineering internships</h2>
-          <p>ML and AI · Backend development</p>
-          <p>Technical profile and résumé under construction.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="section shell">
-    <header class="section-heading"><p>Interests</p></header>
-    <dl class="details-list">
-      <div><dt>Mathematics</dt><dd>Cryptography · Theoretical mechanics</dd></div>
-      <div><dt>Software</dt><dd>ML and AI · Backend development</dd></div>
-      <div><dt>Currently</dt><dd>Under construction</dd></div>
-      <div><dt>Location</dt><dd>Milton, Ontario</dd></div>
+    <h2><span aria-hidden="true">##</span> education</h2>
+    <dl class="md-definition">
+      <div><dt>University</dt><dd>University of Waterloo</dd></div>
+      <div><dt>Degree</dt><dd>Bachelor of Mathematics</dd></div>
+      <div><dt>Program</dt><dd>Computational Mathematics, Honours</dd></div>
+      <div><dt>Graduation</dt><dd>Expected 2029</dd></div>
     </dl>
-  </section>
+
+    <h2><span aria-hidden="true">##</span> interests</h2>
+    <ul>
+      <li>Cryptography</li>
+      <li>Theoretical mechanics</li>
+      <li>Machine learning and AI</li>
+      <li>Backend development</li>
+    </ul>
+
+    <h2><span aria-hidden="true">##</span> currently</h2>
+    <p><code>under construction</code> — technical profile and résumé coming later.</p>
+  </article>
 </BaseLayout>

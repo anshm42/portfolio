@@ -3,28 +3,41 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Ansh Maru — Computational Mathematics">
-  <section class="hero shell">
-    <p class="kicker">Ansh Maru · Milton, Ontario</p>
-    <h1>Computational Mathematics student interested in software engineering.</h1>
-    <p class="hero__intro">
-      I study at the University of Waterloo and am looking for software engineering
-      internships in ML, AI, and backend development.
-    </p>
-    <div class="hero__footer">
-      <div class="hero__actions">
-        <a class="text-link" href="/work">View work <span>→</span></a>
-        <a class="text-link" href="mailto:amaru@uwaterloo.ca">Email <span>↗</span></a>
-      </div>
-      <p class="availability"><span></span> Open to opportunities</p>
-    </div>
+  <section class="frontmatter" aria-label="Profile summary">
+    <p aria-hidden="true">---</p>
+    <dl>
+      <div><dt>name:</dt><dd>Ansh Maru</dd></div>
+      <div><dt>program:</dt><dd>Computational Mathematics, Honours</dd></div>
+      <div><dt>school:</dt><dd>University of Waterloo</dd></div>
+      <div><dt>location:</dt><dd>Milton, Ontario</dd></div>
+      <div><dt>status:</dt><dd>open to SWE internships</dd></div>
+    </dl>
+    <p aria-hidden="true">---</p>
   </section>
 
-  <section class="section shell">
-    <header class="section-heading"><p>Explore</p></header>
-    <div class="page-links">
-      <a href="/work"><span>01</span><strong>Work</strong><p>Projects and technical notes</p><i>→</i></a>
-      <a href="/about"><span>02</span><strong>About</strong><p>Education, interests, and direction</p><i>→</i></a>
-      <a href="/listening"><span>03</span><strong>Listening</strong><p>Artists and current song picks</p><i>→</i></a>
-    </div>
-  </section>
+  <article class="markdown">
+    <header>
+      <h1><span aria-hidden="true">#</span> Hi, I’m Ansh.</h1>
+      <p>
+        I’m a Computational Mathematics student interested in software engineering,
+        particularly <code>ML / AI</code> and <code>backend systems</code>.
+      </p>
+      <p>
+        I like precise ideas, difficult problems, and turning both into software that works well.
+      </p>
+    </header>
+
+    <section>
+      <h2><span aria-hidden="true">##</span> index</h2>
+      <ul class="md-links">
+        <li><a href="/work">work</a><span>projects and technical notes</span></li>
+        <li><a href="/about">about</a><span>education, interests, and direction</span></li>
+        <li><a href="/listening">listening</a><span>artists and current song picks</span></li>
+      </ul>
+    </section>
+
+    <blockquote>
+      Currently looking for software engineering internships in ML, AI, and backend development.
+    </blockquote>
+  </article>
 </BaseLayout>
