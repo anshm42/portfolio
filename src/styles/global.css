@@ -11,7 +11,7 @@
   :root {
     color-scheme: light;
     --bg: #f7f6f2;
-    --grid: transparent;
+    --grid: rgb(0 0 0 / 8%);
     --ink: #292a27;
     --muted: #73756f;
     --accent: #526b98;
