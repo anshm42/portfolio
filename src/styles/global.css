@@ -101,7 +101,9 @@
   .home-projects > li { margin-block: 1.1rem; }
   .home-projects div { display: flex; align-items: baseline; gap: .75rem; }
   .home-projects p { margin-block: .15rem; color: var(--muted); font-size: .86rem; }
-  .repo-link { font-family: var(--mono); font-size: .58rem; }
+  .repo-link { display: inline-flex; color: var(--muted); }
+  .repo-link:hover { color: var(--accent); }
+  .repo-link svg { width: .85rem; height: .85rem; }
 
   .md-definition div { display: grid; grid-template-columns: 8rem 1fr; padding-block: .45rem; }
   .md-definition dt { color: var(--muted); font-family: var(--mono); font-size: .66rem; }
