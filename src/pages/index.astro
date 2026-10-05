@@ -1,39 +1,7 @@
 ---
 import '../styles/global.css';
 
-const projects = [
-  {
-    number: '01',
-    title: 'Your strongest project',
-    summary: 'The clearest example of software you designed, built, and finished.',
-    stack: 'TypeScript · React',
-  },
-  {
-    number: '02',
-    title: 'A technical challenge',
-    summary: 'Architecture, algorithms, or a difficult engineering tradeoff.',
-    stack: 'Python · PostgreSQL',
-  },
-  {
-    number: '03',
-    title: 'Math meets software',
-    summary: 'A project connecting mathematics to practical computation.',
-    stack: 'Python · Data',
-  },
-  {
-    number: '04',
-    title: 'A curious experiment',
-    summary: 'Something personal that shows how you explore and learn.',
-    stack: 'Your tools',
-  },
-];
-
-const music = [
-  ['01', 'Album title', 'Artist'],
-  ['02', 'Album title', 'Artist'],
-  ['03', 'Album title', 'Artist'],
-  ['04', 'Album title', 'Artist'],
-];
+const artists = ['Sade', 'The Weeknd', 'Brent Faiyaz', "Pz'"];
 ---
 
 <!doctype html>
@@ -43,7 +11,7 @@ const music = [
     <meta name="viewport" content="width=device-width" />
     <meta
       name="description"
-      content="A mathematics student pursuing software engineering."
+      content="Ansh Maru is a Computational Mathematics student at the University of Waterloo interested in ML, AI, and backend software engineering."
     />
     <meta name="theme-color" content="#f4f2eb" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -53,7 +21,7 @@ const music = [
       href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500&family=Spline+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <title>Mathematics → Software Engineering</title>
+    <title>Ansh Maru — Computational Mathematics</title>
     <script is:inline>
       const savedTheme = localStorage.getItem('theme');
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -65,16 +33,16 @@ const music = [
 
     <header class="site-header shell">
       <a class="identity" href="#top" aria-label="Home">
-        <strong>YN</strong>
-        <span>Mathematics student</span>
+        <strong>AM</strong>
+        <span>Computational Mathematics</span>
       </a>
 
       <nav aria-label="Primary navigation">
         <a href="#work">Work</a>
-        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
         <a href="#about">About</a>
-        <a href="#music">Music</a>
-        <a href="#resume">Résumé ↗</a>
+        <a href="#music">Listening</a>
+        <span class="nav-muted">Résumé soon</span>
       </nav>
 
       <button class="theme-toggle" type="button" aria-label="Switch to dark theme">
@@ -85,11 +53,11 @@ const music = [
 
     <main id="main">
       <section class="hero shell" id="top">
-        <p class="kicker">Your Name · Mathematics student</p>
-        <h1>I’m interested in software engineering and building things that work well.</h1>
+        <p class="kicker">Ansh Maru · Milton, Ontario</p>
+        <h1>Computational Mathematics student interested in software engineering.</h1>
         <p class="hero__intro">
-          I use mathematical reasoning to approach unfamiliar problems with clarity,
-          then turn those ideas into practical software.
+          I study at the University of Waterloo and am looking for software engineering
+          internships in ML, AI, and backend development.
         </p>
         <div class="hero__footer">
           <div class="hero__actions">
@@ -106,39 +74,37 @@ const music = [
           <span>4 projects</span>
         </header>
 
-        <div class="projects">
-          {projects.map((project) => (
-            <article class="project">
-              <p class="project__number">{project.number}</p>
-              <div>
-                <h2>{project.title}</h2>
-                <p>{project.summary}</p>
-              </div>
-              <p class="project__stack">{project.stack}</p>
-              <a href="#contact" aria-label={`View ${project.title}`}>↗</a>
-            </article>
-          ))}
+        <div class="construction-row">
+          <div>
+            <h2>Project notes are being prepared.</h2>
+            <p>Four projects and their technical write-ups will live here.</p>
+          </div>
+          <span>Under construction</span>
         </div>
       </section>
 
-      <section class="section split-section shell" id="experience">
+      <section class="section split-section shell" id="education">
         <div>
-          <header class="section-heading"><p><span>02</span> Experience</p></header>
+          <header class="section-heading"><p><span>02</span> Education</p></header>
           <article class="timeline-item">
-            <time>20XX—NOW</time>
-            <div><h2>Your role</h2><p>Company or organisation</p><p>Describe what you contributed and the result, not just the tasks you were given.</p></div>
-          </article>
-          <article class="timeline-item muted-item">
-            <time>20XX</time>
-            <div><h2>Another relevant role</h2><p>Company or organisation</p></div>
+            <time>Expected 2029</time>
+            <div>
+              <h2>Bachelor of Mathematics</h2>
+              <p>Computational Mathematics, Honours</p>
+              <p>University of Waterloo · Expected 2029</p>
+            </div>
           </article>
         </div>
 
         <div>
-          <header class="section-heading"><p><span>03</span> Education</p></header>
+          <header class="section-heading"><p><span>03</span> Direction</p></header>
           <article class="timeline-item">
-            <time>20XX—20XX</time>
-            <div><h2>BSc Mathematics</h2><p>Your university</p><p>Probability · Statistics · Numerical methods · Graph theory</p></div>
+            <time>Seeking</time>
+            <div>
+              <h2>Software engineering internships</h2>
+              <p>ML and AI · Backend development</p>
+              <p>Technical profile and résumé under construction.</p>
+            </div>
           </article>
         </div>
       </section>
@@ -146,39 +112,44 @@ const music = [
       <section class="section about shell" id="about">
         <header class="section-heading"><p><span>04</span> About</p></header>
         <div class="about__layout">
-          <p class="about__lead">I like problems that need both careful reasoning and practical execution.</p>
+          <p class="about__lead">I’m drawn to precise ideas and the systems that make them useful.</p>
           <div class="about__body">
             <p>
-              Use this space to explain how mathematics shapes the way you build software:
-              breaking down unfamiliar problems, reasoning precisely, and communicating complex ideas clearly.
+              I’m Ansh, a Computational Mathematics student with an interest in
+              software engineering. A longer introduction is under construction.
             </p>
             <dl>
-              <div><dt>Focus</dt><dd>Your engineering interests</dd></div>
-              <div><dt>Currently</dt><dd>What you are learning</dd></div>
-              <div><dt>Location</dt><dd>Your city or region</dd></div>
+              <div><dt>Math</dt><dd>Cryptography · Theoretical mechanics</dd></div>
+              <div><dt>Software</dt><dd>ML and AI · Backend development</dd></div>
+              <div><dt>Currently</dt><dd>Under construction</dd></div>
+              <div><dt>Location</dt><dd>Milton, Ontario</dd></div>
             </dl>
           </div>
         </div>
       </section>
 
       <section class="section music shell" id="music">
-        <header class="section-heading"><p><span>05</span> Currently in rotation</p><span>After-hours listening</span></header>
+        <header class="section-heading"><p><span>05</span> Currently listening</p><span>Song picks coming soon</span></header>
         <div class="music-list">
-          {music.map(([number, album, artist]) => (
-            <a href="#contact"><span>{number}</span><strong>{album}</strong><span>{artist}</span><span>↗</span></a>
+          {artists.map((artist, index) => (
+            <div><span>0{index + 1}</span><strong>{artist}</strong></div>
           ))}
         </div>
       </section>
 
       <section class="contact shell" id="contact">
         <p class="kicker">06 / Contact</p>
-        <h2>Let’s solve something interesting.</h2>
-        <a href="mailto:you@example.com">you@example.com <span>↗</span></a>
+        <h2>Say hello.</h2>
+        <a href="mailto:amaru@uwaterloo.ca">amaru@uwaterloo.ca <span>↗</span></a>
+        <div class="contact__links">
+          <a href="https://github.com/anshm42">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/anshmaru">LinkedIn ↗</a>
+        </div>
       </section>
     </main>
 
     <footer class="footer shell">
-      <p>Designed and built by Your Name</p>
+      <p>Designed and built by Ansh Maru</p>
       <div><a href="#top">Back to top ↑</a><span>© 2026</span></div>
     </footer>
 

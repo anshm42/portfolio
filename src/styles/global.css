@@ -69,6 +69,7 @@
   nav { display: flex; gap: clamp(1rem, 2vw, 2rem); }
   nav a, .footer a { text-decoration: none; }
   nav a:hover, .footer a:hover { color: var(--accent); }
+  .nav-muted { color: var(--muted); }
 
   .theme-toggle {
     position: relative;
@@ -119,19 +120,16 @@
   .section-heading p { color: var(--ink); }
   .section-heading p span { margin-right: 1rem; color: var(--accent); }
 
-  .projects { border-top: 1px solid var(--line); }
-  .project {
-    display: grid;
-    grid-template-columns: 3rem minmax(0, 1fr) 11rem 2rem;
-    gap: 1.5rem;
-    align-items: start;
+  .construction-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
     padding-block: 1.75rem;
-    border-bottom: 1px solid var(--line);
+    border-block: 1px solid var(--line);
   }
-  .project h2 { margin-bottom: .3rem; font-size: 1.2rem; font-weight: 500; letter-spacing: -.015em; }
-  .project div p, .project__stack { color: var(--muted); }
-  .project__stack { font-family: var(--mono); font-size: .65rem; }
-  .project > a { color: var(--accent); font-family: var(--mono); text-decoration: none; }
+  .construction-row h2 { margin-bottom: .25rem; font-size: 1.1rem; font-weight: 500; }
+  .construction-row p { color: var(--muted); }
+  .construction-row > span { color: var(--muted); font-family: var(--mono); font-size: .62rem; text-transform: uppercase; }
 
   .split-section { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(4rem, 9vw, 8rem); }
   .timeline-item { display: grid; grid-template-columns: 7rem 1fr; gap: 1.25rem; padding-block: 1.4rem; border-top: 1px solid var(--line); }
@@ -148,9 +146,9 @@
   .about dl div { display: grid; grid-template-columns: 7rem 1fr; padding-block: .7rem; border-top: 1px solid var(--line); }
   dt { color: var(--muted); font-family: var(--mono); font-size: .62rem; text-transform: uppercase; }
 
-  .music-list { border-top: 1px solid var(--line); }
-  .music-list a { display: grid; grid-template-columns: 3rem 1fr 1fr auto; gap: 1rem; align-items: center; padding-block: 1.1rem; border-bottom: 1px solid var(--line); text-decoration: none; }
-  .music-list a:hover { color: var(--accent); }
+  .music-list { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
+  .music-list div { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; padding-block: 1.1rem; border-bottom: 1px solid var(--line); }
+  .music-list div:nth-child(odd) { margin-right: 2rem; }
   .music-list span { color: var(--muted); font-family: var(--mono); font-size: .62rem; }
   .music-list strong { font-size: .95rem; font-weight: 500; }
 
@@ -158,6 +156,9 @@
   .contact h2 { max-width: 22ch; margin-block: 1.25rem 2rem; font-size: clamp(2rem, 4.5vw, 3.5rem); font-weight: 400; letter-spacing: -.04em; line-height: 1.1; }
   .contact > a { color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: .3rem; }
   .contact > a span { color: var(--accent); }
+  .contact__links { display: flex; gap: 1.5rem; margin-top: 2rem; font-family: var(--mono); font-size: .63rem; text-transform: uppercase; }
+  .contact__links a { color: var(--muted); text-decoration: none; }
+  .contact__links a:hover { color: var(--accent); }
   .footer { display: flex; justify-content: space-between; padding-block: 1.6rem; border-top: 1px solid var(--line); color: var(--muted); font-family: var(--mono); font-size: .6rem; text-transform: uppercase; }
   .footer div { display: flex; gap: 2rem; }
 
@@ -168,14 +169,12 @@
     .hero { padding-block: 5rem; }
     .hero h1 { font-size: clamp(2rem, 10vw, 3.25rem); }
     .hero__footer { align-items: flex-start; flex-direction: column; }
-    .project { grid-template-columns: 2rem 1fr 1rem; gap: 1rem; }
-    .project__stack { grid-column: 2; }
-    .project > a { grid-column: 3; grid-row: 1; }
+    .construction-row { align-items: flex-start; flex-direction: column; }
     .split-section, .about__layout { grid-template-columns: 1fr; }
     .split-section > div + div { margin-top: 1rem; }
     .about__layout { gap: 2.5rem; }
-    .music-list a { grid-template-columns: 2rem 1fr auto; }
-    .music-list a span:nth-child(3) { display: none; }
+    .music-list { grid-template-columns: 1fr; }
+    .music-list div:nth-child(odd) { margin-right: 0; }
     .footer { gap: 2rem; }
   }
 
