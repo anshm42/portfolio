@@ -7,18 +7,14 @@ const artists = ['Sade', 'The Weeknd', 'Brent Faiyaz', "Pz'"];
 <BaseLayout title="Listening — Ansh Maru" description="What Ansh Maru is listening to right now.">
   <article class="markdown page">
     <p class="breadcrumb"><a href="/">ansh-maru.md</a> / listening</p>
-    <h1><span aria-hidden="true">#</span> listening</h1>
+    <h1>Listening</h1>
     <p>A small log of what has been in rotation lately.</p>
 
-    <hr />
-
-    <h2><span aria-hidden="true">##</span> artists right now</h2>
+    <h2>Artists right now</h2>
     <ol class="listening-list">
       {artists.map((artist) => <li>{artist}</li>)}
     </ol>
 
-    <blockquote>
-      Favorite song picks will replace this note once the list is ready.
-    </blockquote>
+    <blockquote>Favorite song picks will replace this note once the list is ready.</blockquote>
   </article>
 </BaseLayout>
