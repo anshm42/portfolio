@@ -1,11 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const artists = ['Sade', 'The Weeknd', 'Brent Faiyaz', "Pz'"];
+
 const tracks = [
   'https://open.spotify.com/embed/track/2UgTHKJFCYqQ7CGmmslDeC?utm_source=generator&theme=0&si=7b2f41ae887048ed',
   'https://open.spotify.com/embed/track/3RR6mToN9kcf2ESbzSCtJk?utm_source=generator&theme=0&si=17a86ee2a04440b1',
   'https://open.spotify.com/embed/track/5yqRtfOflVdoWcAAeHyUwc?utm_source=generator&theme=0&si=1abf714e742f4aee',
+  'https://open.spotify.com/embed/track/4xkTT5tj3xlbJ4feaIXEv2?theme=0',
+  'https://open.spotify.com/embed/track/6MF5JoJYj5uK07Si6fRAPM?theme=0',
+  'https://open.spotify.com/embed/track/2p8IUWQDrpjuFltbdgLOag?theme=0',
+  'https://open.spotify.com/embed/track/2v0AG62ZHtD3I4YmTb3WYM?theme=0',
+  'https://open.spotify.com/embed/track/0E0DRHf5PfMeor0ZCwB3oT?theme=0',
+  'https://open.spotify.com/embed/track/4tReFKumS5bcFahdXDiM1b?theme=0',
 ];
 ---
 
@@ -15,10 +21,6 @@ const tracks = [
     <h1>Listening</h1>
     <p>A small log of what has been in rotation lately.</p>
 
-    <h2>Artists right now</h2>
-    <ul class="listening-list">
-      {artists.map((artist) => <li>{artist}</li>)}
-    </ul>
 
     <h2>Song picks</h2>
     <div class="song-embeds">
