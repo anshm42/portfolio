@@ -77,7 +77,7 @@
 }
 
 @layer document {
-  .markdown { padding-block: 3.5rem 5rem; }
+  .markdown { padding-block: 1.5rem 5rem; }
   .markdown > header { margin-bottom: 2.75rem; }
   .markdown section { margin-block: 2.75rem; }
   .markdown h1, .markdown h2 { line-height: 1.5; }
@@ -151,7 +151,7 @@
     :root { --shell: min(100% - 2rem, 46rem); }
     .filebar { grid-template-columns: 1fr auto; padding-block: .75rem; }
     nav { grid-column: 1 / -1; grid-row: 2; justify-content: space-between; gap: .5rem; overflow-x: auto; padding-top: .4rem; }
-    .markdown { padding-block: 2.75rem 4rem; }
+    .markdown { padding-block: 1rem 4rem; }
     .md-definition div { grid-template-columns: 1fr; gap: 0; }
     .project-entry header, .experience-entry header { align-items: flex-start; flex-direction: column; gap: .25rem; }
     .site-footer div { flex-wrap: wrap; }
