@@ -1,6 +1,0 @@
-Face in clouds emoji artwork: Twemoji
-Copyright Twitter, Inc. and other contributors.
-Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
-https://creativecommons.org/licenses/by/4.0/
-Source: https://github.com/jdecked/twemoji/blob/main/assets/svg/1f636-200d-1f32b-fe0f.svg
-SVG artwork is unmodified; PNG versions are resized rasterizations.
