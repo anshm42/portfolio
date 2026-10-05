@@ -11,6 +11,7 @@
   :root {
     color-scheme: light;
     --bg: #f7f6f2;
+    --grid: transparent;
     --ink: #292a27;
     --muted: #73756f;
     --accent: #526b98;
@@ -24,7 +25,8 @@
 
   :root[data-theme='dark'] {
     color-scheme: dark;
-    --bg: #191a18;
+    --bg: #000;
+    --grid: rgb(255 255 255 / 5%);
     --ink: #e5e4de;
     --muted: #999b94;
     --accent: #91a8d0;
@@ -38,7 +40,11 @@
     min-height: 100svh;
     display: flex;
     flex-direction: column;
-    background: var(--bg);
+    background-color: var(--bg);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 40px 40px;
     color: var(--ink);
     font-family: var(--sans);
     font-size: .92rem;
