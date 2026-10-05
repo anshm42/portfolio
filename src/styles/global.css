@@ -110,6 +110,8 @@
 
   .site-footer { padding-block: 1rem 2rem; color: var(--muted); font-family: var(--mono); font-size: .6rem; }
   .site-footer div { display: flex; gap: 1rem; margin-bottom: .35rem; }
+  .site-footer a { display: inline-flex; align-items: center; gap: .35rem; }
+  .site-footer svg { width: .8rem; height: .8rem; flex: none; }
 }
 
 @layer responsive {
