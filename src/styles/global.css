@@ -124,9 +124,16 @@
   .experience-entry header p, .experience-entry time { color: var(--muted); font-size: .78rem; }
   .experience-entry time { flex: none; font-family: var(--mono); font-size: .6rem; }
 
-  .listening-list { max-width: 24rem; }
-  .song-embeds { display: grid; gap: .75rem; }
-  .spotify-embed { display: block; width: 100%; max-width: 34rem; border: 0; border-radius: 12px; }
+  .song-embeds {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .75rem;
+    width: min(100vw - 2rem, 66rem);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .spotify-embed { display: block; width: 100%; min-width: 0; border: 0; border-radius: 12px; }
 
   .site-footer { padding-block: 1rem 2rem; color: var(--muted); font-family: var(--mono); font-size: .6rem; }
   .site-footer div { display: flex; gap: 1rem; margin-bottom: .35rem; }
@@ -135,7 +142,12 @@
 }
 
 @layer responsive {
+  @media (max-width: 1000px) {
+    .song-embeds { grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; }
+  }
+
   @media (max-width: 640px) {
+    .song-embeds { grid-template-columns: 1fr; }
     :root { --shell: min(100% - 2rem, 46rem); }
     .filebar { grid-template-columns: 1fr auto; padding-block: .75rem; }
     nav { grid-column: 1 / -1; grid-row: 2; justify-content: space-between; gap: .5rem; overflow-x: auto; padding-top: .4rem; }
