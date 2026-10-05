@@ -1,5 +1,18 @@
 export const projects = [
   {
+    slug: 'nuclear-challenge',
+    name: 'Nuclear Challenge — Leak Probability Model',
+    stack: 'Python · XGBoost · Streamlit',
+    github: 'https://github.com/anshm42/F26-NuclearChallenge',
+    impact:
+      'A machine-learning research prototype that estimates leak probabilities and classifies leak types from the first two minutes of simulated nuclear plant sensor data. Won Best Final Product at the Canadian Nuclear Laboratories Innovation Challenge.',
+    details: [
+      'Uses calibrated XGBoost models for leak detection and conditional classification across eight leak/break scenarios.',
+      'Splits complete simulation runs and excludes direct leak indicators to prevent data leakage during evaluation.',
+      'Provides a Streamlit interface for uploading simulation CSVs and inspecting predictions; built on simulated data, not validated for operational nuclear safety decisions.',
+    ],
+  },
+  {
     slug: 'slangify',
     name: 'slangify',
     stack: 'Python · Gemini API · Urban Dictionary API · Docker',
@@ -38,17 +51,5 @@ export const projects = [
       'Uses persistent model caching on Modal to reduce serverless GPU startup overhead.',
     ],
   },
-  {
-    slug: 'translatify',
-    name: 'Translatify',
-    stack: 'Electron · React · TypeScript · Spotify API · DeepL API',
-    github: 'https://github.com/anshm42/translatify',
-    impact:
-      'A desktop app that follows the current Spotify track and displays time-synced lyrics with line-by-line translations. PKCE authentication, playback polling, request cancellation, and persistent caching keep the experience responsive and synchronized.',
-    details: [
-      'Integrates LRCLIB lyric lookup with fallback search and DeepL translation.',
-      'Refreshes Spotify tokens and polls playback state to keep lyrics aligned with the song.',
-      'Batches translation requests and avoids repeated API calls for previously viewed tracks.',
-    ],
-  },
+
 ] as const;
