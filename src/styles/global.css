@@ -112,8 +112,8 @@
   .md-definition div { display: grid; grid-template-columns: 8rem 1fr; padding-block: .45rem; }
   .md-definition dt { color: var(--muted); font-family: var(--mono); font-size: .66rem; }
 
-  .project-entries { margin-top: 2.75rem; }
   .project-entry { scroll-margin-top: 1rem; padding: .7rem; border-radius: 4px; }
+  .project-entries > .project-entry:first-child { margin-top: 0; }
   .project-entry:target { background: var(--accent-soft); }
   .project-entry header { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; margin-bottom: .7rem; }
   .project-entry header div { display: flex; align-items: baseline; gap: .7rem; }
