@@ -1,15 +1,28 @@
 export const projects = [
   {
     slug: 'nuclear-challenge',
-    name: 'Nuclear Challenge — Leak Probability Model',
-    stack: 'Python · XGBoost · Streamlit',
+    name: 'Nuclear Leak Probability and Classification',
+    stack: 'Python · XGBoost · scikit-learn · pandas · NumPy · Streamlit · joblib',
     github: 'https://github.com/anshm42/F26-NuclearChallenge',
     impact:
-      'A machine-learning research prototype that estimates leak probabilities and classifies leak types from the first two minutes of simulated nuclear plant sensor data. Won Best Final Product at the Canadian Nuclear Laboratories Innovation Challenge.',
+      'Calibrated XGBoost models achieved 100% leak-detection accuracy and 100% target leak-scenario classification accuracy on the NPPAD simulation test set. Won Best Final Product at the 2026 Canadian Nuclear Laboratories Innovation Challenge.',
     details: [
-      'Uses calibrated XGBoost models for leak detection and conditional classification across eight leak/break scenarios.',
+      'Estimates leak probabilities and classifies likely leak types from simulated nuclear-plant sensor time series.',
       'Splits complete simulation runs and excludes direct leak indicators to prevent data leakage during evaluation.',
       'Provides a Streamlit interface for uploading simulation CSVs and inspecting predictions; built on simulated data, not validated for operational nuclear safety decisions.',
+    ],
+  },
+  {
+    slug: 'exsamine',
+    name: 'ExSAMine',
+    stack: 'Next.js · FastAPI · Gemini API · Modal',
+    github: 'https://github.com/anshm42/hoyahacks2026',
+    impact:
+      'An AI-powered digital forensics platform combining Gemini with Meta’s SAM 3 for automated evidence analysis. It was runner-up for Best Digital Forensics Hack at HoyaHacks 2026 and ran detection on auto-scaling Modal GPUs.',
+    details: [
+      'Turns LLM-generated detection prompts into computer-vision segmentation and forensic insights.',
+      'Adds confidence scoring to a three-stage AI analysis pipeline.',
+      'Uses persistent model caching on Modal to reduce serverless GPU startup overhead.',
     ],
   },
   {
@@ -36,19 +49,6 @@ export const projects = [
       'Uses custom layer and activation interfaces to keep the network architecture flexible.',
       'Supports ReLU, Leaky ReLU, and Sigmoid activation modules selectable per layer.',
       'Implements training and inference without relying on a machine-learning framework.',
-    ],
-  },
-  {
-    slug: 'exsamine',
-    name: 'ExSAMine',
-    stack: 'Next.js · FastAPI · Gemini API · Modal',
-    github: 'https://github.com/anshm42/hoyahacks2026',
-    impact:
-      'An AI-powered digital forensics platform combining Gemini with Meta’s SAM 3 for automated evidence analysis. It was runner-up for Best Digital Forensics Hack at HoyaHacks 2026 and ran detection on auto-scaling Modal GPUs.',
-    details: [
-      'Turns LLM-generated detection prompts into computer-vision segmentation and forensic insights.',
-      'Adds confidence scoring to a three-stage AI analysis pipeline.',
-      'Uses persistent model caching on Modal to reduce serverless GPU startup overhead.',
     ],
   },
 
