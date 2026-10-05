@@ -94,17 +94,18 @@
   .breadcrumb { margin-bottom: 2rem !important; }
   .breadcrumb a { color: var(--muted); }
 
-  .profile-meta { margin-block: 2.75rem; }
-  .profile-meta div, .md-definition div { display: grid; grid-template-columns: 8rem 1fr; padding-block: .45rem; }
-  .profile-meta dt, .md-definition dt { color: var(--muted); font-family: var(--mono); font-size: .66rem; }
-
-  .md-links { padding: 0 !important; list-style: none; }
-  .md-links li { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; margin: 0; padding-block: .55rem; }
-  .md-links span { color: var(--muted); }
+  .resume-points { margin-block: 2.75rem; padding-left: 1.25rem; }
+  .resume-points > li { margin-block: .8rem; }
+  .resume-points ul { margin-block: .35rem; }
+  .resume-points img { width: 1rem; height: 1rem; margin-left: .25rem; vertical-align: -.2rem; }
+  .md-definition div { display: grid; grid-template-columns: 8rem 1fr; padding-block: .45rem; }
+  .md-definition dt { color: var(--muted); font-family: var(--mono); font-size: .66rem; }
 
   .project-list { max-width: 34rem; padding: 0 !important; list-style: none; }
-  .project-list li { display: flex; justify-content: space-between; gap: 1rem; padding-block: .45rem; }
-  .project-list span { color: var(--muted); font-family: var(--mono); font-size: .62rem; }
+  .project-list li { scroll-margin-top: 2rem; padding: .55rem .7rem; border-radius: 4px; }
+  .project-list li:target { background: var(--accent-soft); }
+  .project-list strong { display: inline-block; min-width: 7rem; font-weight: 500; }
+  .project-list span { color: var(--muted); }
 
   .listening-list { max-width: 24rem; }
 
@@ -120,8 +121,7 @@
     .filebar { grid-template-columns: 1fr auto; padding-block: .75rem; }
     nav { grid-column: 1 / -1; grid-row: 2; justify-content: space-between; gap: .5rem; overflow-x: auto; padding-top: .4rem; }
     .markdown { padding-block: 2.75rem 4rem; }
-    .md-links li, .profile-meta div, .md-definition div { grid-template-columns: 1fr; gap: 0; }
-    .md-links span { font-size: .82rem; }
+    .md-definition div { grid-template-columns: 1fr; gap: 0; }
     .site-footer div { flex-wrap: wrap; }
   }
 
