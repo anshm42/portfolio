@@ -125,6 +125,7 @@
   .experience-entry time { flex: none; font-family: var(--mono); font-size: .6rem; }
 
   .listening-list { max-width: 24rem; }
+  .song-embeds { display: grid; gap: .75rem; }
   .spotify-embed { display: block; width: 100%; max-width: 34rem; border: 0; border-radius: 12px; }
 
   .site-footer { padding-block: 1rem 2rem; color: var(--muted); font-family: var(--mono); font-size: .6rem; }

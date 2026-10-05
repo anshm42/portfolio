@@ -2,6 +2,10 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const artists = ['Sade', 'The Weeknd', 'Brent Faiyaz', "Pz'"];
+const tracks = [
+  'https://open.spotify.com/embed/track/2UgTHKJFCYqQ7CGmmslDeC?utm_source=generator&theme=0&si=7b2f41ae887048ed',
+  'https://open.spotify.com/embed/track/3RR6mToN9kcf2ESbzSCtJk?utm_source=generator&theme=0&si=17a86ee2a04440b1',
+];
 ---
 
 <BaseLayout title="Listening — Ansh Maru" description="What Ansh Maru is listening to right now.">
@@ -16,15 +20,19 @@ const artists = ['Sade', 'The Weeknd', 'Brent Faiyaz', "Pz'"];
     </ul>
 
     <h2>Song picks</h2>
-    <iframe
-      class="spotify-embed"
-      src="https://open.spotify.com/embed/track/2UgTHKJFCYqQ7CGmmslDeC?utm_source=generator&theme=0&si=7b2f41ae887048ed"
-      title="Spotify song pick"
-      width="100%"
-      height="152"
-      allowfullscreen
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy"
-    ></iframe>
+    <div class="song-embeds">
+      {tracks.map((track, index) => (
+        <iframe
+          class="spotify-embed"
+          src={track}
+          title={`Spotify song pick ${index + 1}`}
+          width="100%"
+          height="152"
+          allowfullscreen
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      ))}
+    </div>
   </article>
 </BaseLayout>
