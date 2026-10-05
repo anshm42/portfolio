@@ -1,24 +1,31 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { projects } from '../data/projects';
 ---
 
 <BaseLayout title="Work — Ansh Maru" description="Projects and technical work by Ansh Maru.">
   <article class="markdown page">
     <p class="breadcrumb"><a href="/">Ansh Maru</a> / work</p>
     <h1>Work</h1>
-    <p>Projects, decisions, and technical notes will live here.</p>
+    <p>Selected projects, implementation details, and measurable outcomes.</p>
 
-    <h2>Projects</h2>
-    <blockquote>
-      <strong>Status:</strong> under construction. I’ll add the real problems, tradeoffs,
-      and outcomes rather than filling this page with placeholder claims.
-    </blockquote>
-
-    <ul class="project-list">
-      <li id="project-1"><strong>Project 01</strong><span>Short summary coming soon.</span></li>
-      <li id="project-2"><strong>Project 02</strong><span>Short summary coming soon.</span></li>
-      <li id="project-3"><strong>Project 03</strong><span>Short summary coming soon.</span></li>
-      <li id="project-4"><strong>Project 04</strong><span>Short summary coming soon.</span></li>
-    </ul>
+    <div class="project-entries">
+      {projects.map((project, index) => (
+        <section class="project-entry" id={project.slug}>
+          <header>
+            <div>
+              <span>0{index + 1}</span>
+              <h2>{project.name}</h2>
+            </div>
+            <a href={project.github} target="_blank" rel="noreferrer">github ↗</a>
+          </header>
+          <p class="project-stack">{project.stack}</p>
+          <p>{project.impact}</p>
+          <ul>
+            {project.details.map((detail) => <li>{detail}</li>)}
+          </ul>
+        </section>
+      ))}
+    </div>
   </article>
 </BaseLayout>

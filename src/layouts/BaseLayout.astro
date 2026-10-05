@@ -52,7 +52,7 @@ const links = [
         {links.map(([label, href]) => (
           <a href={href} aria-current={path.startsWith(href) ? 'page' : undefined}>{label}</a>
         ))}
-        <span class="nav-muted">resume.todo</span>
+        <a href="/resume.pdf" target="_blank">resume</a>
       </nav>
 
       <button class="theme-toggle" type="button" aria-label="Switch to dark theme">

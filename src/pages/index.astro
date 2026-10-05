@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { projects } from '../data/projects';
 ---
 
 <BaseLayout title="Ansh Maru — Computational Mathematics">
@@ -22,11 +23,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </li>
       <li>
         Built:
-        <ul>
-          <li><a href="/work#project-1">Project 1</a>: short summary</li>
-          <li><a href="/work#project-2">Project 2</a>: short summary</li>
-          <li><a href="/work#project-3">Project 3</a>: short summary</li>
-          <li><a href="/work#project-4">Project 4</a>: short summary</li>
+        <ul class="home-projects">
+          {projects.map((project) => (
+            <li>
+              <div>
+                <a href={`/work#${project.slug}`}>{project.name}</a>
+                <a class="repo-link" href={project.github} target="_blank" rel="noreferrer">github ↗</a>
+              </div>
+              <p>{project.impact}</p>
+            </li>
+          ))}
         </ul>
       </li>
       <li>prev @ Pratt &amp; Whitney Canada</li>
