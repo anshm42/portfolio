@@ -13,8 +13,8 @@ const {
 
 const path = Astro.url.pathname;
 const links = [
+  ['about', '/'],
   ['work', '/work'],
-  ['about', '/about'],
   ['listening', '/listening'],
 ];
 ---
@@ -50,7 +50,7 @@ const links = [
 
       <nav aria-label="Primary navigation">
         {links.map(([label, href]) => (
-          <a href={href} aria-current={path.startsWith(href) ? 'page' : undefined}>{label}</a>
+          <a href={href} aria-current={(path === href || (href !== '/' && path.startsWith(`${href}/`))) ? 'page' : undefined}>{label}</a>
         ))}
         <a href="/resume.pdf" target="_blank">resume</a>
       </nav>
