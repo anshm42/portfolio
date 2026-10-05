@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const artists = ['Sade', 'The Weeknd', 'Brent Faiyaz', "Pz'"];
+---
+
+<BaseLayout title="Listening — Ansh Maru" description="What Ansh Maru is listening to right now.">
+  <header class="page-intro shell">
+    <p class="kicker">03 / Listening</p>
+    <h1>What I’m listening to right now.</h1>
+    <p>Favorite song picks are coming soon. For now, these artists are in rotation.</p>
+  </header>
+
+  <section class="section shell">
+    <div class="music-list">
+      {artists.map((artist, index) => (
+        <div><span>0{index + 1}</span><strong>{artist}</strong></div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
